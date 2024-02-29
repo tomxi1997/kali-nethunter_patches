@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 #export KV=4.19
 #export KD=vendor/xxxxx_defconfig
