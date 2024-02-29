@@ -21,17 +21,17 @@ export GKI_ROOT=$(pwd)
 #加入内核识别，可在刷入好查看内核版本时显示-Kali-Nethunter
 
 echo "             " >> "$GKI_ROOT/arch/arm64/configs/${KD}"
-sed -i '/CONFIG_LOCALVERSION/d' "$GKI_ROOT/arch/arm64/configs/${KD}"
+#sed -i '/CONFIG_LOCALVERSION/d' "$GKI_ROOT/arch/arm64/configs/${KD}"
 sed -i '/CONFIG_DEFAULT_HOSTNAME/d' "$GKI_ROOT/arch/arm64/configs/${KD}"
-echo 'CONFIG_LOCALVERSION="-Kali-Nethunter"' >> "$GKI_ROOT/arch/arm64/configs/${KD}"
+#echo 'CONFIG_LOCALVERSION="-Kali-Nethunter"' >> "$GKI_ROOT/arch/arm64/configs/${KD}"
 echo 'CONFIG_DEFAULT_HOSTNAME="kali"' >> "$GKI_ROOT/arch/arm64/configs/${KD}"
 
 
 
 #
-cp -rf /root/Toolchain/kali-nethunter-kernel $GKI_ROOT
-cp /root/Toolchain/Kali-Nethunter-*.sh $GKI_ROOT
-chmod +x *.sh
+#cp -rf /root/Toolchain/kali-nethunter-kernel $GKI_ROOT
+#cp /root/Toolchain/Kali-Nethunter-*.sh $GKI_ROOT
+#chmod +x *.sh
 
 #4.19
 if [ $KV = "4.19" ]
